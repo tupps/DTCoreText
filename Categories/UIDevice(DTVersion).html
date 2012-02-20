@@ -27,6 +27,8 @@
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 	
 	
 	
@@ -53,6 +55,8 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
@@ -103,6 +107,14 @@
 					
 					
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Convenience method to return the current OS version as a struct of three NSIntegers. Using UIDevice&rsquo;s <code>currentDevice</code> method and the current device&rsquo;s <code>systemVersion</code> returns a string delimited by a period which can then be split into an array. This method returns a struct storing each value instead of a string or array. Used in <a href="../Classes/DTCoreTextLayoutFrame.html">DTCoreTextLayoutFrame</a> to workaround the way iOS 4.2 handles images.</p>
+					</div>
+					
+					
+					
 					
 					
 					<div class="section section-tasks">
@@ -117,7 +129,7 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/osVersion">&ndash;&nbsp;osVersion</a></code>
-		
+		<span class="tooltip"></span>
 	</span>
 	
 	
@@ -141,6 +153,38 @@
 						<div class="section-method">
 	<a name="//api/name/osVersion" title="osVersion"></a>
 	<h3 class="subsubtitle method-title">osVersion</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (DTVersion)osVersion</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns a DTVersion struct with three fields each of type NSInteger storing the major, minor, and point numbers identifying this OS version.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIDevice+DTVersion.h</code><br />
+	</div>				
 	
 	
 </div>

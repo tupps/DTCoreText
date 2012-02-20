@@ -38,6 +38,10 @@
 
 <p>This project aims to duplicate the methods present on Mac OSX which allow creation of <code>NSAttributedString</code> from HTML code on iOS. Previously we referred to it as NSAttributedString+HTML (or NSAS+HTML in short) but this only covers about half of what this framework does.</p>
 
+<p>Please support us so that we can continue to make DTCoreText even more awesome!</p>
+
+<p><a href='[http://www.pledgie.com/campaigns/16615'](http://www.pledgie.com/campaigns/16615')<img alt='Click here to lend your support to: Migrate DTCoreText to libxml2 and make a donation at www.pledgie.com !' src='[http://www.pledgie.com/campaigns/16615.png?skin](http://www.pledgie.com/campaigns/16615.png?skin)_name=chrome' border='0' /></a></p>
+
 <p>The project covers two broad areas:</p>
 
 <ol>
@@ -58,7 +62,11 @@
 
 <h2>License</h2>
 
-<p>It is open source and covered by a standard BSD license. That means you have to mention <strong>Cocoanetics</strong> as the original author of this code. You can purchase a Non-Attribution-License from us.</p>
+<p>It is open source and covered by a standard BSD license. That means you have to mention <em>Cocoanetics</em> as the original author of this code. You can purchase a Non-Attribution-License from us.</p>
+
+<h2>Documentation</h2>
+
+<p>Documentation can be <a href="http://cocoanetics.github.com/DTCoreText">browsed online</a> or installed in your Xcode Organizer via the <a href="http://cocoanetics.github.com/DTCoreText/DTCoreText.atom">Atom Feed URL</a>.</p>
 
 <h2>Usage</h2>
 
@@ -68,21 +76,52 @@
 <li>NSCache</li>
 <li>GCD-based threading and locking</li>
 <li>Blocks</li>
+<li>ARC</li>
 </ul>
 
 
-<p>These are your options for adding DTCoreText to your project.</p>
+<p>The best way to use DTCoreText with Xcode 4.2 is to add it in Xcode as a subproject of your project with the following steps.</p>
 
 <ol>
-<li>Copy all classes and headers from the Core/Source folder to your project.</li>
-<li>Link your project against the libDTCoreText static library. Note that the &ldquo;Static Library&rdquo; target does not produce a universal library. You will also need to add all header files contained in the Core/Source folder to your project.</li>
-<li>Link your project against the universal static library produced from the &ldquo;Static Framework&rdquo;.</li>
+<li>Download DTCoreText as a subfolder of your project folder</li>
+<li>Open the destination project and drag <code>DTCoreText.xcodeproj</code> as a subordinate item in the Project Navigator</li>
+<li><p>In your prefix.pch file add:</p>
+
+<pre><code> #import "DTCoreText.h"
+ #import &lt;SenTestingKit/SenTestingKit.h&gt;
+ #define ALLOW_IPHONE_SPECIAL_CASES 1
+</code></pre></li>
+<li><p>In your application target&rsquo;s Build Phases add all of the below to the Link Binary With Libraries phase (you can also do this from the Target&rsquo;s Summary view in the Linked Frameworks and Libraries):</p>
+
+<pre><code> libDTCoreText.a 
+ CoreText.framework
+ ImageIO.framework
+ QuartzCore.framework
+ libxml2.dylib
+ SenTestingKit.framework
+</code></pre></li>
+<li><p>Go to File: Project Settings… and change the derived data location to project-relative.</p></li>
+<li>Add the DerivedData folder to your git ignore.</li>
+<li>In your application&rsquo;s target Build Settings set the &ldquo;User Header Search Paths&rdquo; to the directory containing your project with recrusive set to YES. Set the Header Search Paths to <code>/usr/include/libxml2</code>. Set &ldquo;Always Search User Paths&rdquo; to YES.</li>
 </ol>
 
 
-<p>When linking you need to add the -ObjC and -all_load to your app target&rsquo;s &ldquo;Other Linker Flags&rdquo;.</p>
+<p>If you do not want to deal with Git submodules simply add DTCoreText to your project&rsquo;s git ignore file and pull updates to DTCoreText as its own independent Git repository. Otherwise you are free to add DTCoreText as a submodule.</p>
+
+<p><strong>You also have these other installation options instead:</strong></p>
+
+<ul>
+<li>Copy all classes and headers from the Core/Source folder to your project.</li>
+<li>Link your project against the libDTCoreText static library. Note that the &ldquo;Static Library&rdquo; target does not produce a universal library. You will also need to add all header files contained in the Core/Source folder to your project.</li>
+<li>Link your project against the universal static library produced from the &ldquo;Static Framework&rdquo;.</li>
+</ul>
+
+
+<p>When linking you need` to add the -ObjC and -all_load to your app target&rsquo;s &ldquo;Other Linker Flags&rdquo;. If your app does not use ARC yet (but DTCoreText does) then you also need the -fobjc-arc linker flag.</p>
 
 <p>When building from source it is recommended that you at the ALLOW_IPHONE_SPECIAL_CASES define to your PCH, this setting is &ldquo;baked into&rdquo; the library and framework targets.</p>
+
+<p>The project has been changed to use libxml2 for parsing HTML, so you need to link in the libxml2.dylib, and, if you&rsquo;re copying all files from Core/Source, you must add the path &ldquo;/usr/include/libxml2&rdquo; to your header search paths as well.</p>
 
 <h2>Known Issues</h2>
 
@@ -95,6 +134,19 @@
 
 
 <p>Some combinations of fonts and unusual list types cause an extra space to appear. e.g. 20 px Courier + Circle</p>
+
+<p>In many aspects DTCoreText is superior to the Mac version of generating NSAttributedStrings from HTML. These become apparent in the MacUnitTest where the output from both is directly compared. I am summarizing them here for references.</p>
+
+<p>In the following &ldquo;Mac&rdquo; means the initWithHTML: methods there, &ldquo;DTCoreText&rdquo; means DTCoreText&rsquo;s initWithHTML and/or <a href="Classes/DTHTMLAttributedStringBuilder.html">DTHTMLAttributedStringBuilder</a>.</p>
+
+<ul>
+<li>Mac does not support the video tag, DTCoreText does.</li>
+<li>DTCoreText is able to synthesize small caps by putting all characters in upper case and using a second smaller font for lowercase characters.</li>
+<li>I suspect that Mac makes use of the -webkit-margin-* CSS styles for spacing the paragraphs, DTCoreText only uses the -webkit-margin-bottom and margin-bottom at present.</li>
+<li>Mac supports CSS following addresses, e.g. &ldquo;ul ul&rdquo; to change the list style for stacked lists. DTCoreText does not support that and so list bullets stay the same for multiple levels.</li>
+<li>Mac outputs newlines in PRE tags as \n, iOS replaces these with Unicode Line Feed characters so that the paragraph spacing is applied at the end of the PRE tag, not after each line. (iOS wraps code lines when layouting)</li>
+</ul>
+
 
 <p>If you find an issue then you are welcome to fix it and contribute your fix via a GitHub pull request.</p>
 						
@@ -131,7 +183,11 @@
 							
 							<li><a href="Classes/DTCoreTextParagraphStyle.html">DTCoreTextParagraphStyle</a></li>
 							
+							<li><a href="Classes/DTHTMLAttributedStringBuilder.html">DTHTMLAttributedStringBuilder</a></li>
+							
 							<li><a href="Classes/DTHTMLElement.html">DTHTMLElement</a></li>
+							
+							<li><a href="Classes/DTHTMLParser.html">DTHTMLParser</a></li>
 							
 							<li><a href="Classes/DTLazyImageView.html">DTLazyImageView</a></li>
 							
@@ -147,12 +203,6 @@
 							
 							<li><a href="Classes/DemoTextViewController.html">DemoTextViewController</a></li>
 							
-							<li><a href="Classes/NSAttributedStringHTMLTest.html">NSAttributedStringHTMLTest</a></li>
-							
-							<li><a href="Classes/NSStringHTMLTest.html">NSStringHTMLTest</a></li>
-							
-							<li><a href="Classes/UIColorHTMLTest.html">UIColorHTMLTest</a></li>
-							
 						</ul>
 					</div>
 					
@@ -165,6 +215,8 @@
 							
 							<li><a href="Protocols/DTAttributedTextContentViewDelegate.html">DTAttributedTextContentViewDelegate</a></li>
 							
+							<li><a href="Protocols/DTHTMLParserDelegate.html">DTHTMLParserDelegate</a></li>
+							
 							<li><a href="Protocols/DTLazyImageViewDelegate.html">DTLazyImageViewDelegate</a></li>
 							
 							<li><a href="Protocols/DTWebVideoViewDelegate.html">DTWebVideoViewDelegate</a></li>
@@ -175,15 +227,27 @@
 						<h2 class="index-title">Category References</h2>
 						<ul>
 							
+							<li><a href="Categories/NSAttributedString(DTCoreText).html">NSAttributedString(DTCoreText)</a></li>
+							
 							<li><a href="Categories/NSAttributedString(HTML).html">NSAttributedString(HTML)</a></li>
+							
+							<li><a href="Categories/NSAttributedString(SmallCaps).html">NSAttributedString(SmallCaps)</a></li>
 							
 							<li><a href="Categories/NSCharacterSet(HTML).html">NSCharacterSet(HTML)</a></li>
 							
-							<li><a href="Categories/NSData(Base64).html">NSData(Base64)</a></li>
+							<li><a href="Categories/NSColor(HTML).html">NSColor(HTML)</a></li>
+							
+							<li><a href="Categories/NSData(DTBase64).html">NSData(DTBase64)</a></li>
+							
+							<li><a href="Categories/NSImage(HTML).html">NSImage(HTML)</a></li>
 							
 							<li><a href="Categories/NSMutableAttributedString(HTML).html">NSMutableAttributedString(HTML)</a></li>
 							
+							<li><a href="Categories/NSMutableString(HTML).html">NSMutableString(HTML)</a></li>
+							
 							<li><a href="Categories/NSScanner(HTML).html">NSScanner(HTML)</a></li>
+							
+							<li><a href="Categories/NSString(CSS).html">NSString(CSS)</a></li>
 							
 							<li><a href="Categories/NSString(HTML).html">NSString(HTML)</a></li>
 							
@@ -191,11 +255,15 @@
 							
 							<li><a href="Categories/NSString(Paragraphs).html">NSString(Paragraphs)</a></li>
 							
+							<li><a href="Categories/NSString(SlashEscaping).html">NSString(SlashEscaping)</a></li>
+							
 							<li><a href="Categories/NSURL(HTML).html">NSURL(HTML)</a></li>
 							
 							<li><a href="Categories/UIColor(HTML).html">UIColor(HTML)</a></li>
 							
 							<li><a href="Categories/UIDevice(DTVersion).html">UIDevice(DTVersion)</a></li>
+							
+							<li><a href="Categories/UIImage(HTML).html">UIImage(HTML)</a></li>
 							
 						</ul>
 						

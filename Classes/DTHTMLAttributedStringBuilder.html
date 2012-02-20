@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>UIColorHTMLTest Class Reference</title>
+		<title>DTHTMLAttributedStringBuilder Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
@@ -17,7 +17,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">UIColorHTMLTest Class Reference</h1>
+				<h1 class="hideInXcode">DTHTMLAttributedStringBuilder Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -36,15 +36,22 @@
 	
 	
 	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/willFlushCallback">&nbsp;&nbsp;&nbsp;&nbsp;willFlushCallback</option>
+	
+	
 	
 	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/testColorHTMLHexString">&nbsp;&nbsp;&nbsp;&nbsp;- testColorHTMLHexString</option>
+	<option value="//api/name/buildString">&nbsp;&nbsp;&nbsp;&nbsp;- buildString</option>
 	
-	<option value="//api/name/testValidColorWithHexString">&nbsp;&nbsp;&nbsp;&nbsp;- testValidColorWithHexString</option>
+	<option value="//api/name/generatedAttributedString">&nbsp;&nbsp;&nbsp;&nbsp;- generatedAttributedString</option>
+	
+	<option value="//api/name/initWithHTML:options:documentAttributes:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithHTML:options:documentAttributes:</option>
 	
 	
 	
@@ -66,15 +73,23 @@
 
 
 
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/willFlushCallback">willFlushCallback</a></span></li>
+	
+</ul></li>
+
 
 
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/testColorHTMLHexString">testColorHTMLHexString</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/buildString">buildString</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/testValidColorWithHexString">testValidColorWithHexString</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/generatedAttributedString">generatedAttributedString</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithHTML:options:documentAttributes:">initWithHTML:options:documentAttributes:</a></span></li>
 	
 </ul></li>
 
@@ -83,7 +98,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="UIColorHTMLTest Class Reference" name="top"></a>
+				<a title="DTHTMLAttributedStringBuilder Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -92,7 +107,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">UIColorHTMLTest Class Reference</h1>
+						<h1 class="title title-header">DTHTMLAttributedStringBuilder Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -100,10 +115,13 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">SenTestCase</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value"><a href="../Protocols/DTHTMLParserDelegate.html">DTHTMLParserDelegate</a></td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">UIColorHTMLTest.h</td>
+	<td class="specification-value">DTHTMLAttributedStringBuilder.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -123,17 +141,31 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/testValidColorWithHexString">&ndash;&nbsp;testValidColorWithHexString</a></code>
+		<code><a href="#//api/name/initWithHTML:options:documentAttributes:">&ndash;&nbsp;initWithHTML:options:documentAttributes:</a></code>
 		
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/testColorHTMLHexString">&ndash;&nbsp;testColorHTMLHexString</a></code>
+		<code><a href="#//api/name/buildString">&ndash;&nbsp;buildString</a></code>
 		
 	</span>
 	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/generatedAttributedString">&ndash;&nbsp;generatedAttributedString</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/willFlushCallback">&nbsp;&nbsp;willFlushCallback</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
 	
 </li>
 						</ul>
@@ -144,6 +176,19 @@
 					
 					
 					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/willFlushCallback" title="willFlushCallback"></a>
+	<h3 class="subsubtitle method-title">willFlushCallback</h3>
+	
+	
+</div>
+						
+					</div>
+					
 					
 					
 					
@@ -153,15 +198,22 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/testColorHTMLHexString" title="testColorHTMLHexString"></a>
-	<h3 class="subsubtitle method-title">testColorHTMLHexString</h3>
+	<a name="//api/name/buildString" title="buildString"></a>
+	<h3 class="subsubtitle method-title">buildString</h3>
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/testValidColorWithHexString" title="testValidColorWithHexString"></a>
-	<h3 class="subsubtitle method-title">testValidColorWithHexString</h3>
+	<a name="//api/name/generatedAttributedString" title="generatedAttributedString"></a>
+	<h3 class="subsubtitle method-title">generatedAttributedString</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithHTML:options:documentAttributes:" title="initWithHTML:options:documentAttributes:"></a>
+	<h3 class="subsubtitle method-title">initWithHTML:options:documentAttributes:</h3>
 	
 	
 </div>
