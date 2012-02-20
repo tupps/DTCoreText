@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>DTCoreText Reference</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="index.html">DTCoreText </a></h1>
+				<a id="developerHome" href="index.html">Cocoanetics</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">DTCoreText Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar"></ul>
+		</header>
+		<article>
+			<div id="overview_contents" role="main">
+				<div class="main-navigation navigation-top">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">DTCoreText Reference</h1>
+					</div>		
+				</div>
+				<div id="container">
+					
+					<div class="section section-overview index-overview">
+						
+						
+						<h1>DTCoreText</h1>
+
+<p>This project aims to duplicate the methods present on Mac OSX which allow creation of <code>NSAttributedString</code> from HTML code on iOS. Previously we referred to it as NSAttributedString+HTML (or NSAS+HTML in short) but this only covers about half of what this framework does.</p>
+
+<p>The project covers two broad areas:</p>
+
+<ol>
+<li>Layouting &ndash; Interfacing with CoreText, generating NSAttributedString instances from HTML code</li>
+<li>UI &ndash; several UI-related classes render these objects</li>
+</ol>
+
+
+<p>This is useful for drawing simple rich text like any HTML document without having to use a <code>UIWebView</code>.</p>
+
+<p>Please read the <a href="http://www.cocoanetics.com/2011/08/nsattributedstringhtml-qa/">Q&amp;A</a>.</p>
+
+<p>Your help is much appreciated. Please send pull requests for useful additions you make or ask me what work is required.</p>
+
+<p>If you find brief test cases where the created <code>NSAttributedString</code> differs from the version on OSX please send them to us!</p>
+
+<p>Follow <a href="http://twitter.com/cocoanetics">@cocoanetics</a> on Twitter.</p>
+
+<h2>License</h2>
+
+<p>It is open source and covered by a standard BSD license. That means you have to mention <strong>Cocoanetics</strong> as the original author of this code. You can purchase a Non-Attribution-License from us.</p>
+
+<h2>Usage</h2>
+
+<p>DTCoreText needs a minimum iOS deployment target of 4.3 because of:</p>
+
+<ul>
+<li>NSCache</li>
+<li>GCD-based threading and locking</li>
+<li>Blocks</li>
+</ul>
+
+
+<p>These are your options for adding DTCoreText to your project.</p>
+
+<ol>
+<li>Copy all classes and headers from the Core/Source folder to your project.</li>
+<li>Link your project against the libDTCoreText static library. Note that the &ldquo;Static Library&rdquo; target does not produce a universal library. You will also need to add all header files contained in the Core/Source folder to your project.</li>
+<li>Link your project against the universal static library produced from the &ldquo;Static Framework&rdquo;.</li>
+</ol>
+
+
+<p>When linking you need to add the -ObjC and -all_load to your app target&rsquo;s &ldquo;Other Linker Flags&rdquo;.</p>
+
+<p>When building from source it is recommended that you at the ALLOW_IPHONE_SPECIAL_CASES define to your PCH, this setting is &ldquo;baked into&rdquo; the library and framework targets.</p>
+
+<h2>Known Issues</h2>
+
+<p>CoreText has a problem prior to iOS 5 where it takes around a second on device to initialize its internal font lookup table. You have two workarounds available:</p>
+
+<ul>
+<li>trigger the loading on a background thread like shown in <a href="http://www.cocoanetics.com/2011/04/coretext-loading-performance/">http://www.cocoanetics.com/2011/04/coretext-loading-performance/</a></li>
+<li>if you only use certain fonts then add the variants to the DTCoreTextFontOverrides.plist, this speeds up the finding of a specific font face from the font family</li>
+</ul>
+
+
+<p>Some combinations of fonts and unusual list types cause an extra space to appear. e.g. 20 px Courier + Circle</p>
+
+<p>If you find an issue then you are welcome to fix it and contribute your fix via a GitHub pull request.</p>
+						
+						
+					</div>
+					
+					
+					
+					<div class="index-column">
+						<h2 class="index-title">Class References</h2>
+						<ul>
+							
+							<li><a href="Classes/DTAttributedTextCell.html">DTAttributedTextCell</a></li>
+							
+							<li><a href="Classes/DTAttributedTextContentView.html">DTAttributedTextContentView</a></li>
+							
+							<li><a href="Classes/DTAttributedTextView.html">DTAttributedTextView</a></li>
+							
+							<li><a href="Classes/DTCSSListStyle.html">DTCSSListStyle</a></li>
+							
+							<li><a href="Classes/DTCSSStylesheet.html">DTCSSStylesheet</a></li>
+							
+							<li><a href="Classes/DTCoreTextFontCollection.html">DTCoreTextFontCollection</a></li>
+							
+							<li><a href="Classes/DTCoreTextFontDescriptor.html">DTCoreTextFontDescriptor</a></li>
+							
+							<li><a href="Classes/DTCoreTextGlyphRun.html">DTCoreTextGlyphRun</a></li>
+							
+							<li><a href="Classes/DTCoreTextLayoutFrame.html">DTCoreTextLayoutFrame</a></li>
+							
+							<li><a href="Classes/DTCoreTextLayoutLine.html">DTCoreTextLayoutLine</a></li>
+							
+							<li><a href="Classes/DTCoreTextLayouter.html">DTCoreTextLayouter</a></li>
+							
+							<li><a href="Classes/DTCoreTextParagraphStyle.html">DTCoreTextParagraphStyle</a></li>
+							
+							<li><a href="Classes/DTHTMLElement.html">DTHTMLElement</a></li>
+							
+							<li><a href="Classes/DTLazyImageView.html">DTLazyImageView</a></li>
+							
+							<li><a href="Classes/DTLinkButton.html">DTLinkButton</a></li>
+							
+							<li><a href="Classes/DTTextAttachment.html">DTTextAttachment</a></li>
+							
+							<li><a href="Classes/DTWebVideoView.html">DTWebVideoView</a></li>
+							
+							<li><a href="Classes/DemoAppDelegate.html">DemoAppDelegate</a></li>
+							
+							<li><a href="Classes/DemoSnippetsViewController.html">DemoSnippetsViewController</a></li>
+							
+							<li><a href="Classes/DemoTextViewController.html">DemoTextViewController</a></li>
+							
+							<li><a href="Classes/NSAttributedStringHTMLTest.html">NSAttributedStringHTMLTest</a></li>
+							
+							<li><a href="Classes/NSStringHTMLTest.html">NSStringHTMLTest</a></li>
+							
+							<li><a href="Classes/UIColorHTMLTest.html">UIColorHTMLTest</a></li>
+							
+						</ul>
+					</div>
+					
+					
+						
+					<div class="index-column">
+						
+						<h2 class="index-title">Protocol References</h2>
+						<ul>
+							
+							<li><a href="Protocols/DTAttributedTextContentViewDelegate.html">DTAttributedTextContentViewDelegate</a></li>
+							
+							<li><a href="Protocols/DTLazyImageViewDelegate.html">DTLazyImageViewDelegate</a></li>
+							
+							<li><a href="Protocols/DTWebVideoViewDelegate.html">DTWebVideoViewDelegate</a></li>
+							
+						</ul>
+						
+						
+						<h2 class="index-title">Category References</h2>
+						<ul>
+							
+							<li><a href="Categories/NSAttributedString(HTML).html">NSAttributedString(HTML)</a></li>
+							
+							<li><a href="Categories/NSCharacterSet(HTML).html">NSCharacterSet(HTML)</a></li>
+							
+							<li><a href="Categories/NSData(Base64).html">NSData(Base64)</a></li>
+							
+							<li><a href="Categories/NSMutableAttributedString(HTML).html">NSMutableAttributedString(HTML)</a></li>
+							
+							<li><a href="Categories/NSScanner(HTML).html">NSScanner(HTML)</a></li>
+							
+							<li><a href="Categories/NSString(HTML).html">NSString(HTML)</a></li>
+							
+							<li><a href="Categories/NSString(MalformedUTF8Additions).html">NSString(MalformedUTF8Additions)</a></li>
+							
+							<li><a href="Categories/NSString(Paragraphs).html">NSString(Paragraphs)</a></li>
+							
+							<li><a href="Categories/NSURL(HTML).html">NSURL(HTML)</a></li>
+							
+							<li><a href="Categories/UIColor(HTML).html">UIColor(HTML)</a></li>
+							
+							<li><a href="Categories/UIDevice(DTVersion).html">UIDevice(DTVersion)</a></li>
+							
+						</ul>
+						
+					</div>
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-02-20)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
+						
+	
+					</div>
+				</div>
+			</div>
+		</article>		
+	</body>
+</html>
