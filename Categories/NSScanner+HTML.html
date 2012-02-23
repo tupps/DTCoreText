@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>DTWebVideoView Class Reference</title>
+		<title>NSScanner(HTML) Category Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
@@ -17,7 +17,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">DTWebVideoView Class Reference</h1>
+				<h1 class="hideInXcode">NSScanner(HTML) Category Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -36,15 +36,21 @@
 	
 	
 	
-	<option value="properties">Properties</option>
-	
-	<option value="//api/name/attachment">&nbsp;&nbsp;&nbsp;&nbsp;attachment</option>
-	
-	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
 	
 	
 	
 	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/logPosition">&nbsp;&nbsp;&nbsp;&nbsp;- logPosition</option>
+	
+	<option value="//api/name/scanCSSAttribute:value:">&nbsp;&nbsp;&nbsp;&nbsp;- scanCSSAttribute:value:</option>
+	
+	<option value="//api/name/scanCSSURL:">&nbsp;&nbsp;&nbsp;&nbsp;- scanCSSURL:</option>
+	
+	<option value="//api/name/scanDOCTYPE:">&nbsp;&nbsp;&nbsp;&nbsp;- scanDOCTYPE:</option>
+	
+	<option value="//api/name/scanHTMLTag:attributes:isOpen:isClosed:">&nbsp;&nbsp;&nbsp;&nbsp;- scanHTMLTag:attributes:isOpen:isClosed:</option>
 	
 	
 	
@@ -66,24 +72,30 @@
 
 
 
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/attachment">attachment</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/logPosition">logPosition</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scanCSSAttribute:value:">scanCSSAttribute:value:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scanCSSURL:">scanCSSURL:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scanDOCTYPE:">scanDOCTYPE:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scanHTMLTag:attributes:isOpen:isClosed:">scanHTMLTag:attributes:isOpen:isClosed:</a></span></li>
 	
 </ul></li>
-
-
-
-
 
 
 			</ul>
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="DTWebVideoView Class Reference" name="top"></a>
+				<a title="NSScanner(HTML) Category Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -92,21 +104,15 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">DTWebVideoView Class Reference</h1>
+						<h1 class="title title-header">NSScanner(HTML) Category Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">UIView</td>
-</tr><tr>
-	<td class="specification-title">Conforms to</td>
-	<td class="specification-value">UIWebViewDelegate</td>
-</tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">DTWebVideoView.h</td>
+	<td class="specification-value">NSScanner+HTML.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -126,17 +132,38 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+		<code><a href="#//api/name/scanHTMLTag:attributes:isOpen:isClosed:">&ndash;&nbsp;scanHTMLTag:attributes:isOpen:isClosed:</a></code>
 		
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/attachment">&nbsp;&nbsp;attachment</a></code>
+		<code><a href="#//api/name/scanDOCTYPE:">&ndash;&nbsp;scanDOCTYPE:</a></code>
 		
 	</span>
-	<span class="task-item-suffix">property</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/scanCSSAttribute:value:">&ndash;&nbsp;scanCSSAttribute:value:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/scanCSSURL:">&ndash;&nbsp;scanCSSURL:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/logPosition">&ndash;&nbsp;logPosition</a></code>
+		
+	</span>
+	
 	
 </li>
 						</ul>
@@ -147,29 +174,50 @@
 					
 					
 					
+					
+					
+					
+					
 					<div class="section section-methods">
-						<a title="Properties" name="properties"></a>
-						<h2 class="subtitle subtitle-methods">Properties</h2>
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/attachment" title="attachment"></a>
-	<h3 class="subsubtitle method-title">attachment</h3>
+	<a name="//api/name/logPosition" title="logPosition"></a>
+	<h3 class="subsubtitle method-title">logPosition</h3>
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/delegate" title="delegate"></a>
-	<h3 class="subsubtitle method-title">delegate</h3>
+	<a name="//api/name/scanCSSAttribute:value:" title="scanCSSAttribute:value:"></a>
+	<h3 class="subsubtitle method-title">scanCSSAttribute:value:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/scanCSSURL:" title="scanCSSURL:"></a>
+	<h3 class="subsubtitle method-title">scanCSSURL:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/scanDOCTYPE:" title="scanDOCTYPE:"></a>
+	<h3 class="subsubtitle method-title">scanDOCTYPE:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/scanHTMLTag:attributes:isOpen:isClosed:" title="scanHTMLTag:attributes:isOpen:isClosed:"></a>
+	<h3 class="subsubtitle method-title">scanHTMLTag:attributes:isOpen:isClosed:</h3>
 	
 	
 </div>
 						
 					</div>
-					
-					
-					
-					
 					
 					
 				</div>

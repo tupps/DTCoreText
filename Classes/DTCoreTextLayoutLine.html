@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
+		<meta name="generator" content="appledoc 2.0.5 (build 752)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -61,6 +61,8 @@
 	
 	<option value="//api/name/calculatedLeading">&nbsp;&nbsp;&nbsp;&nbsp;- calculatedLeading</option>
 	
+	<option value="//api/name/calculatedLineHeight">&nbsp;&nbsp;&nbsp;&nbsp;- calculatedLineHeight</option>
+	
 	<option value="//api/name/calculatedLineHeightMultiplier">&nbsp;&nbsp;&nbsp;&nbsp;- calculatedLineHeightMultiplier</option>
 	
 	<option value="//api/name/correctAttachmentHeights:">&nbsp;&nbsp;&nbsp;&nbsp;- correctAttachmentHeights:</option>
@@ -75,7 +77,7 @@
 	
 	<option value="//api/name/imageBoundsInContext:">&nbsp;&nbsp;&nbsp;&nbsp;- imageBoundsInContext:</option>
 	
-	<option value="//api/name/initWithLine:layoutFrame:origin:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithLine:layoutFrame:origin:</option>
+	<option value="//api/name/initWithLine:layoutFrame:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithLine:layoutFrame:</option>
 	
 	<option value="//api/name/numberOfGlyphs">&nbsp;&nbsp;&nbsp;&nbsp;- numberOfGlyphs</option>
 	
@@ -137,6 +139,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/calculatedLeading">calculatedLeading</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/calculatedLineHeight">calculatedLineHeight</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/calculatedLineHeightMultiplier">calculatedLineHeightMultiplier</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/correctAttachmentHeights:">correctAttachmentHeights:</a></span></li>
@@ -151,7 +155,7 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/imageBoundsInContext:">imageBoundsInContext:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithLine:layoutFrame:origin:">initWithLine:layoutFrame:origin:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithLine:layoutFrame:">initWithLine:layoutFrame:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/numberOfGlyphs">numberOfGlyphs</a></span></li>
 	
@@ -214,7 +218,7 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/initWithLine:layoutFrame:origin:">&ndash;&nbsp;initWithLine:layoutFrame:origin:</a></code>
+		<code><a href="#//api/name/initWithLine:layoutFrame:">&ndash;&nbsp;initWithLine:layoutFrame:</a></code>
 		
 	</span>
 	
@@ -306,7 +310,14 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/calculatedLeading">&ndash;&nbsp;calculatedLeading</a></code>
-		
+		<span class="tooltip"><p>Calculates the leading size which is the space before this current line.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/calculatedLineHeight">&ndash;&nbsp;calculatedLineHeight</a></code>
+		<span class="tooltip"><p>Calculates the line height for the entire line from going through the paragraph styles and finding minimum and maximum.</p></span>
 	</span>
 	
 	
@@ -320,7 +331,7 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/correctAttachmentHeights:">&ndash;&nbsp;correctAttachmentHeights:</a></code>
-		
+		<span class="tooltip"><p>Adjust the baselines of all lines in this layout frame to fit the heights of text attachments.</p></span>
 	</span>
 	
 	
@@ -450,6 +461,77 @@
 	<h3 class="subsubtitle method-title">calculatedLeading</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates the leading size which is the space before this current line.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CGFloat)calculatedLeading</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The leading for this line.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextLayoutLine.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/calculatedLineHeight" title="calculatedLineHeight"></a>
+	<h3 class="subsubtitle method-title">calculatedLineHeight</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates the line height for the entire line from going through the paragraph styles and finding minimum and maximum.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CGFloat)calculatedLineHeight</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The overall line height for this line or zero if no line height is specified.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextLayoutLine.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -462,6 +544,43 @@
 						<div class="section-method">
 	<a name="//api/name/correctAttachmentHeights:" title="correctAttachmentHeights:"></a>
 	<h3 class="subsubtitle method-title">correctAttachmentHeights:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Adjust the baselines of all lines in this layout frame to fit the heights of text attachments.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)correctAttachmentHeights:(CGFloat *)<em>downShift</em></code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><code>YES</code> if the line needed an adjustment, <code>NO</code> if no adjustment was carried out</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This is used to work around a CoreText bug that was fixed in iOS 4.2</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextLayoutLine.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -502,8 +621,8 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/initWithLine:layoutFrame:origin:" title="initWithLine:layoutFrame:origin:"></a>
-	<h3 class="subsubtitle method-title">initWithLine:layoutFrame:origin:</h3>
+	<a name="//api/name/initWithLine:layoutFrame:" title="initWithLine:layoutFrame:"></a>
+	<h3 class="subsubtitle method-title">initWithLine:layoutFrame:</h3>
 	
 	
 </div>
@@ -570,9 +689,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-02-20)</span><br />
+						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-02-23)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 752)</a>.</span></p>
 						
 					</div>
 				</div>

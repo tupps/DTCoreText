@@ -5,7 +5,7 @@
 		<title>DTCoreText Reference</title>
 		<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
+		<meta name="generator" content="appledoc 2.0.5 (build 752)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -40,7 +40,7 @@
 
 <p>Please support us so that we can continue to make DTCoreText even more awesome!</p>
 
-<p><a href='[http://www.pledgie.com/campaigns/16615'](http://www.pledgie.com/campaigns/16615')<img alt='Click here to lend your support to: Migrate DTCoreText to libxml2 and make a donation at www.pledgie.com !' src='[http://www.pledgie.com/campaigns/16615.png?skin](http://www.pledgie.com/campaigns/16615.png?skin)_name=chrome' border='0' /></a></p>
+<p><a href='http://www.pledgie.com/campaigns/16615'><img alt='Click here to lend your support to: Migrate DTCoreText to libxml2 and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/16615.png?skin_name=chrome' border='0' /></a></p>
 
 <p>The project covers two broad areas:</p>
 
@@ -88,17 +88,13 @@
 <li><p>In your prefix.pch file add:</p>
 
 <pre><code> #import "DTCoreText.h"
- #import &lt;SenTestingKit/SenTestingKit.h&gt;
- #define ALLOW_IPHONE_SPECIAL_CASES 1
 </code></pre></li>
 <li><p>In your application target&rsquo;s Build Phases add all of the below to the Link Binary With Libraries phase (you can also do this from the Target&rsquo;s Summary view in the Linked Frameworks and Libraries):</p>
 
-<pre><code> libDTCoreText.a 
- CoreText.framework
+<pre><code> The "Static Library" target from the DTCoreText sub-project
  ImageIO.framework
  QuartzCore.framework
  libxml2.dylib
- SenTestingKit.framework
 </code></pre></li>
 <li><p>Go to File: Project Settings… and change the derived data location to project-relative.</p></li>
 <li>Add the DerivedData folder to your git ignore.</li>
@@ -108,7 +104,7 @@
 
 <p>If you do not want to deal with Git submodules simply add DTCoreText to your project&rsquo;s git ignore file and pull updates to DTCoreText as its own independent Git repository. Otherwise you are free to add DTCoreText as a submodule.</p>
 
-<p><strong>You also have these other installation options instead:</strong></p>
+<p><em>You also have these other installation options instead:</em></p>
 
 <ul>
 <li>Copy all classes and headers from the Core/Source folder to your project.</li>
@@ -119,8 +115,6 @@
 
 <p>When linking you need` to add the -ObjC and -all_load to your app target&rsquo;s &ldquo;Other Linker Flags&rdquo;. If your app does not use ARC yet (but DTCoreText does) then you also need the -fobjc-arc linker flag.</p>
 
-<p>When building from source it is recommended that you at the ALLOW_IPHONE_SPECIAL_CASES define to your PCH, this setting is &ldquo;baked into&rdquo; the library and framework targets.</p>
-
 <p>The project has been changed to use libxml2 for parsing HTML, so you need to link in the libxml2.dylib, and, if you&rsquo;re copying all files from Core/Source, you must add the path &ldquo;/usr/include/libxml2&rdquo; to your header search paths as well.</p>
 
 <h2>Known Issues</h2>
@@ -128,7 +122,7 @@
 <p>CoreText has a problem prior to iOS 5 where it takes around a second on device to initialize its internal font lookup table. You have two workarounds available:</p>
 
 <ul>
-<li>trigger the loading on a background thread like shown in <a href="http://www.cocoanetics.com/2011/04/coretext-loading-performance/">http://www.cocoanetics.com/2011/04/coretext-loading-performance/</a></li>
+<li>trigger the loading on a background thread like shown in http://www.cocoanetics.com/2011/04/coretext-loading-performance/</li>
 <li>if you only use certain fonts then add the variants to the DTCoreTextFontOverrides.plist, this speeds up the finding of a specific font face from the font family</li>
 </ul>
 
@@ -137,7 +131,7 @@
 
 <p>In many aspects DTCoreText is superior to the Mac version of generating NSAttributedStrings from HTML. These become apparent in the MacUnitTest where the output from both is directly compared. I am summarizing them here for references.</p>
 
-<p>In the following &ldquo;Mac&rdquo; means the initWithHTML: methods there, &ldquo;DTCoreText&rdquo; means DTCoreText&rsquo;s initWithHTML and/or <a href="Classes/DTHTMLAttributedStringBuilder.html">DTHTMLAttributedStringBuilder</a>.</p>
+<p>In the following &ldquo;Mac&rdquo; means the initWithHTML: methods there, &ldquo;DTCoreText&rdquo; means DTCoreText&rsquo;s initWithHTML and/or DTHTMLAttributedStringBuilder.</p>
 
 <ul>
 <li>Mac does not support the video tag, DTCoreText does.</li>
@@ -221,41 +215,41 @@
 						<h2 class="index-title">Category References</h2>
 						<ul>
 							
-							<li><a href="Categories/NSAttributedString(DTCoreText).html">NSAttributedString(DTCoreText)</a></li>
+							<li><a href="Categories/NSAttributedString+DTCoreText.html">NSAttributedString(DTCoreText)</a></li>
 							
-							<li><a href="Categories/NSAttributedString(HTML).html">NSAttributedString(HTML)</a></li>
+							<li><a href="Categories/NSAttributedString+HTML.html">NSAttributedString(HTML)</a></li>
 							
-							<li><a href="Categories/NSAttributedString(SmallCaps).html">NSAttributedString(SmallCaps)</a></li>
+							<li><a href="Categories/NSAttributedString+SmallCaps.html">NSAttributedString(SmallCaps)</a></li>
 							
-							<li><a href="Categories/NSCharacterSet(HTML).html">NSCharacterSet(HTML)</a></li>
+							<li><a href="Categories/NSCharacterSet+HTML.html">NSCharacterSet(HTML)</a></li>
 							
-							<li><a href="Categories/NSColor(HTML).html">NSColor(HTML)</a></li>
+							<li><a href="Categories/NSColor+HTML.html">NSColor(HTML)</a></li>
 							
-							<li><a href="Categories/NSData(DTBase64).html">NSData(DTBase64)</a></li>
+							<li><a href="Categories/NSData+DTBase64.html">NSData(DTBase64)</a></li>
 							
-							<li><a href="Categories/NSImage(HTML).html">NSImage(HTML)</a></li>
+							<li><a href="Categories/NSImage+HTML.html">NSImage(HTML)</a></li>
 							
-							<li><a href="Categories/NSMutableAttributedString(HTML).html">NSMutableAttributedString(HTML)</a></li>
+							<li><a href="Categories/NSMutableAttributedString+HTML.html">NSMutableAttributedString(HTML)</a></li>
 							
-							<li><a href="Categories/NSMutableString(HTML).html">NSMutableString(HTML)</a></li>
+							<li><a href="Categories/NSMutableString+HTML.html">NSMutableString(HTML)</a></li>
 							
-							<li><a href="Categories/NSScanner(HTML).html">NSScanner(HTML)</a></li>
+							<li><a href="Categories/NSScanner+HTML.html">NSScanner(HTML)</a></li>
 							
-							<li><a href="Categories/NSString(CSS).html">NSString(CSS)</a></li>
+							<li><a href="Categories/NSString+CSS.html">NSString(CSS)</a></li>
 							
-							<li><a href="Categories/NSString(HTML).html">NSString(HTML)</a></li>
+							<li><a href="Categories/NSString+HTML.html">NSString(HTML)</a></li>
 							
-							<li><a href="Categories/NSString(MalformedUTF8Additions).html">NSString(MalformedUTF8Additions)</a></li>
+							<li><a href="Categories/NSString+MalformedUTF8Additions.html">NSString(MalformedUTF8Additions)</a></li>
 							
-							<li><a href="Categories/NSString(Paragraphs).html">NSString(Paragraphs)</a></li>
+							<li><a href="Categories/NSString+Paragraphs.html">NSString(Paragraphs)</a></li>
 							
-							<li><a href="Categories/NSURL(HTML).html">NSURL(HTML)</a></li>
+							<li><a href="Categories/NSURL+HTML.html">NSURL(HTML)</a></li>
 							
-							<li><a href="Categories/UIColor(HTML).html">UIColor(HTML)</a></li>
+							<li><a href="Categories/UIColor+HTML.html">UIColor(HTML)</a></li>
 							
-							<li><a href="Categories/UIDevice(DTVersion).html">UIDevice(DTVersion)</a></li>
+							<li><a href="Categories/UIDevice+DTVersion.html">UIDevice(DTVersion)</a></li>
 							
-							<li><a href="Categories/UIImage(HTML).html">UIImage(HTML)</a></li>
+							<li><a href="Categories/UIImage+HTML.html">UIImage(HTML)</a></li>
 							
 						</ul>
 						
@@ -268,9 +262,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-02-20)</span><br />
+						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-02-23)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 752)</a>.</span></p>
 						
 	
 					</div>
