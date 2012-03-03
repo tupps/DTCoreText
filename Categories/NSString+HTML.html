@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 752)" />
+		<meta name="generator" content="appledoc 2.0.5 (build 775)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -26,6 +26,8 @@
 				<li id="jumpto_button" role="navigation">
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
 	
 	
 	
@@ -72,6 +74,8 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
@@ -142,6 +146,14 @@
 					
 					
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Methods for making HTML strings easier and quicker to handle.</p>
+					</div>
+					
+					
+					
 					
 					
 					<div class="section section-tasks">
@@ -156,63 +168,63 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/integerValueFromHex">&ndash;&nbsp;integerValueFromHex</a></code>
-		
+		<span class="tooltip"><p>Extract the numbers from this string and return them as an NSUInteger.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/isNumeric">&ndash;&nbsp;isNumeric</a></code>
-		
+		<span class="tooltip"><p>Test whether or not this string is numeric only.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/percentValue">&ndash;&nbsp;percentValue</a></code>
-		
+		<span class="tooltip"><p>Read through this string and store the numbers included, then divide them by 100 giving a percentage.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/stringByNormalizingWhitespace">&ndash;&nbsp;stringByNormalizingWhitespace</a></code>
-		
+		<span class="tooltip"><p>Return a copy of this string with all whitespace characters replaced by space characters.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/hasPrefixCharacterFromSet:">&ndash;&nbsp;hasPrefixCharacterFromSet:</a></code>
-		
+		<span class="tooltip"><p>Determines if the first character of this string is in the parameter characterSet.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/hasSuffixCharacterFromSet:">&ndash;&nbsp;hasSuffixCharacterFromSet:</a></code>
-		
+		<span class="tooltip"><p>Determines if the last character of this string is in the parameter characterSet.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/stringByAddingHTMLEntities">&ndash;&nbsp;stringByAddingHTMLEntities</a></code>
-		
+		<span class="tooltip"><p>Convert a string into a proper HTML string by converting special characters into HTML entities. For example: an ellipsis <code>…</code> is represented by the entity <code>&amp;hellip;</code> in order to display it correctly across text encodings.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/stringByReplacingHTMLEntities">&ndash;&nbsp;stringByReplacingHTMLEntities</a></code>
-		
+		<span class="tooltip"><p>Convert a string from HTML entities into correct character representations using UTF8 encoding. For example: an ellipsis entity representy by <code>&amp;hellip;</code> is converted into <code>…</code>.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/guid">+&nbsp;guid</a></code>
-		
+		<span class="tooltip"><p>Create a globally unique identifier to uniquely identify something. Used to create a GUID, store it in a dictionary or other data structure and retrieve it to uniquely identifiy something. In DTLinkButton multiple parts of the same hyperlink synchronize their looks through the GUID.</p></span>
 	</span>
 	
 	
@@ -236,6 +248,38 @@
 	<h3 class="subsubtitle method-title">guid</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Create a globally unique identifier to uniquely identify something. Used to create a GUID, store it in a dictionary or other data structure and retrieve it to uniquely identifiy something. In DTLinkButton multiple parts of the same hyperlink synchronize their looks through the GUID.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (NSString *)guid</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>GUID assigned to this string to easily and uniquely identify it..</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+HTML.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 					</div>
@@ -251,11 +295,95 @@
 	<h3 class="subsubtitle method-title">hasPrefixCharacterFromSet:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Determines if the first character of this string is in the parameter characterSet.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)hasPrefixCharacterFromSet:(NSCharacterSet *)<em>characterSet</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>characterSet</em></dt>
+			<dd><p>The character set to compare the first character of this string against.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>If the first character of this string is in character set.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+HTML.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/hasSuffixCharacterFromSet:" title="hasSuffixCharacterFromSet:"></a>
 	<h3 class="subsubtitle method-title">hasSuffixCharacterFromSet:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Determines if the last character of this string is in the parameter characterSet.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)hasSuffixCharacterFromSet:(NSCharacterSet *)<em>characterSet</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>characterSet</em></dt>
+			<dd><p>The character set to compare the last character of this string against.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>If the last character of this string is in the character set.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+HTML.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -265,11 +393,75 @@
 	<h3 class="subsubtitle method-title">integerValueFromHex</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Extract the numbers from this string and return them as an NSUInteger.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSUInteger)integerValueFromHex</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An NSUInteger of the number characters in this string.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+HTML.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/isNumeric" title="isNumeric"></a>
 	<h3 class="subsubtitle method-title">isNumeric</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Test whether or not this string is numeric only.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)isNumeric</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>If this string consists only of numeric characters 0-9.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+HTML.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -279,11 +471,75 @@
 	<h3 class="subsubtitle method-title">percentValue</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Read through this string and store the numbers included, then divide them by 100 giving a percentage.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (float)percentValue</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The numbers contained in this string, as a percentage.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+HTML.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/stringByAddingHTMLEntities" title="stringByAddingHTMLEntities"></a>
 	<h3 class="subsubtitle method-title">stringByAddingHTMLEntities</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert a string into a proper HTML string by converting special characters into HTML entities. For example: an ellipsis <code>…</code> is represented by the entity <code>&amp;hellip;</code> in order to display it correctly across text encodings.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)stringByAddingHTMLEntities</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A string containing HTML that now uses proper HTML entities.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+HTML.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -293,11 +549,75 @@
 	<h3 class="subsubtitle method-title">stringByNormalizingWhitespace</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Return a copy of this string with all whitespace characters replaced by space characters.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)stringByNormalizingWhitespace</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A copy of this string with only space characters for whitespace.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+HTML.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/stringByReplacingHTMLEntities" title="stringByReplacingHTMLEntities"></a>
 	<h3 class="subsubtitle method-title">stringByReplacingHTMLEntities</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert a string from HTML entities into correct character representations using UTF8 encoding. For example: an ellipsis entity representy by <code>&amp;hellip;</code> is converted into <code>…</code>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)stringByReplacingHTMLEntities</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A string without HTML entities, instead having the actual characters formerly represented by HTML entities.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+HTML.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -315,9 +635,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-02-23)</span><br />
+						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-03-03)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 752)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 775)</a>.</span></p>
 						
 					</div>
 				</div>

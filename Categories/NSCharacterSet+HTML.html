@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 752)" />
+		<meta name="generator" content="appledoc 2.0.5 (build 775)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -26,6 +26,8 @@
 				<li id="jumpto_button" role="navigation">
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
 	
 	
 	
@@ -61,6 +63,8 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
@@ -119,6 +123,14 @@
 					
 					
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Category on NSCharacterSet to create character sets frequently used and relevant to HTML and CSS string manipulations. Each character set is only initialized once.</p>
+					</div>
+					
+					
+					
 					
 					
 					<div class="section section-tasks">
@@ -133,35 +145,35 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/tagNameCharacterSet">+&nbsp;tagNameCharacterSet</a></code>
-		
+		<span class="tooltip"><p>Creates an alpha-numeric character set, appropriate for tag names.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/tagAttributeNameCharacterSet">+&nbsp;tagAttributeNameCharacterSet</a></code>
-		
+		<span class="tooltip"><p>Creates an alpha-numeric character set just as tagNameCharacterSet does but also with colon, dash, and underscore characters, appropriate for tag attribute names.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/quoteCharacterSet">+&nbsp;quoteCharacterSet</a></code>
-		
+		<span class="tooltip"><p>Creates a character set with the apostrophe character &lsquo; (used as single quote agnostic of direction) and double quote character &ldquo; (agnostic of direction).</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/nonQuotedAttributeEndCharacterSet">+&nbsp;nonQuotedAttributeEndCharacterSet</a></code>
-		
+		<span class="tooltip"><p>Creates a character set with the characters forward slash / and closing angle bracket aka greater than sign >, then forms the union of this character set with the <a href="https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSCharacterSet_Class/Reference/Reference.html">whitespace character set</a> which includes space, tab, newline, and nextline characters. Useful to find the end of an attribute.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/cssStyleAttributeNameCharacterSet">+&nbsp;cssStyleAttributeNameCharacterSet</a></code>
-		
+		<span class="tooltip"><p>Creates an alpha-numeric character set just as tagNameCharacterSet does but also with the dash and underscore characters. Does not contain the colon character because it will mess up parsing of CSS style attributes. Useful for CSS attribute names.</p></span>
 	</span>
 	
 	
@@ -185,11 +197,75 @@
 	<h3 class="subsubtitle method-title">cssStyleAttributeNameCharacterSet</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates an alpha-numeric character set just as tagNameCharacterSet does but also with the dash and underscore characters. Does not contain the colon character because it will mess up parsing of CSS style attributes. Useful for CSS attribute names.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (NSCharacterSet *)cssStyleAttributeNameCharacterSet</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An NSCharacterSet with alpha-numeric characters, dash, and underscore characters.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSCharacterSet+HTML.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/nonQuotedAttributeEndCharacterSet" title="nonQuotedAttributeEndCharacterSet"></a>
 	<h3 class="subsubtitle method-title">nonQuotedAttributeEndCharacterSet</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a character set with the characters forward slash / and closing angle bracket aka greater than sign >, then forms the union of this character set with the <a href="https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSCharacterSet_Class/Reference/Reference.html">whitespace character set</a> which includes space, tab, newline, and nextline characters. Useful to find the end of an attribute.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (NSCharacterSet *)nonQuotedAttributeEndCharacterSet</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An NSCharacterSet with the forward slash, closing angle bracket characters, tab, space, newline, and nextline characters.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSCharacterSet+HTML.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -199,6 +275,38 @@
 	<h3 class="subsubtitle method-title">quoteCharacterSet</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a character set with the apostrophe character &lsquo; (used as single quote agnostic of direction) and double quote character &ldquo; (agnostic of direction).</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (NSCharacterSet *)quoteCharacterSet</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An NSCharacterSet with the single quote and double quote characters: &lsquo;, &ldquo;.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSCharacterSet+HTML.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -206,11 +314,75 @@
 	<h3 class="subsubtitle method-title">tagAttributeNameCharacterSet</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates an alpha-numeric character set just as tagNameCharacterSet does but also with colon, dash, and underscore characters, appropriate for tag attribute names.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (NSCharacterSet *)tagAttributeNameCharacterSet</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An NSCharacterSet with alpha-numeric characters and colon :, dash &ndash;, and underscore _&lsquo;.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSCharacterSet+HTML.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/tagNameCharacterSet" title="tagNameCharacterSet"></a>
 	<h3 class="subsubtitle method-title">tagNameCharacterSet</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates an alpha-numeric character set, appropriate for tag names.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (NSCharacterSet *)tagNameCharacterSet</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An NSCharacterSet with alpha-numeric characters. a-Z, 0-9.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSCharacterSet+HTML.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -230,9 +402,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-02-23)</span><br />
+						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-03-03)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 752)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 775)</a>.</span></p>
 						
 					</div>
 				</div>

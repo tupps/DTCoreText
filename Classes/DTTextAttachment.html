@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 752)" />
+		<meta name="generator" content="appledoc 2.0.5 (build 775)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -26,6 +26,8 @@
 				<li id="jumpto_button" role="navigation">
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
 	
 	
 	
@@ -83,6 +85,8 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
@@ -168,6 +172,14 @@
 					
 					
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>An object to represent an attachment in an HTML/rich text view.</p>
+					</div>
+					
+					
+					
 					
 					
 					<div class="section section-tasks">
@@ -238,14 +250,17 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/textAttachmentWithElement:options:">+&nbsp;textAttachmentWithElement:options:</a></code>
-		
+		<span class="tooltip"><p>Initialize and return a DTTextAttachment with the specified DTHTMLElement and options. Convenience initializer.</p>
+
+<pre><code>The element must have a valid tagName. The size of the returned text attachment is determined by the element, constrained by the option's key for DTMaxImageSize. Any valid image resource included in the element (denoted by the method attributeForKey: "src") is loaded and determines the text attachment size if it was not known before. If a size is too large the image is downsampled with sizeThatFitsKeepingAspectRatio() which preserves the aspect ratio. 
+</code></pre></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/dataURLRepresentation">&ndash;&nbsp;dataURLRepresentation</a></code>
-		
+		<span class="tooltip"><p>Retrieves a string which is in the format &ldquo;data:image/png;base64,%@&rdquo; with this DTTextAttachment&rsquo;s content&rsquo;s data representation encoded in Base64 string encoding. For image contents only.</p></span>
 	</span>
 	
 	
@@ -352,6 +367,56 @@
 	<h3 class="subsubtitle method-title">textAttachmentWithElement:options:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize and return a DTTextAttachment with the specified DTHTMLElement and options. Convenience initializer.</p>
+
+<pre><code>The element must have a valid tagName. The size of the returned text attachment is determined by the element, constrained by the option's key for DTMaxImageSize. Any valid image resource included in the element (denoted by the method attributeForKey: "src") is loaded and determines the text attachment size if it was not known before. If a size is too large the image is downsampled with sizeThatFitsKeepingAspectRatio() which preserves the aspect ratio. 
+</code></pre>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (DTTextAttachment *)textAttachmentWithElement:(DTHTMLElement *)<em>element</em> options:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>element</em></dt>
+			<dd><p>A DTHTMLElement that must have a valid tag name and should have a size. Any element attributes are copied to the text attachment&rsquo;s elements.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>An NSDictionary of options. Used to specify the max image size with the key DTMaxImageSize.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns an initialized DTTextAttachment built using the element and options parameters.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTTextAttachment.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 					</div>
@@ -381,6 +446,38 @@
 	<h3 class="subsubtitle method-title">dataURLRepresentation</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Retrieves a string which is in the format &ldquo;data:image/png;base64,%@&rdquo; with this DTTextAttachment&rsquo;s content&rsquo;s data representation encoded in Base64 string encoding. For image contents only.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)dataURLRepresentation</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A Base64 encoded string of the png data representation of this text attachment&rsquo;s image contents.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTTextAttachment.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -403,9 +500,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-02-23)</span><br />
+						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-03-03)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 752)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 775)</a>.</span></p>
 						
 					</div>
 				</div>

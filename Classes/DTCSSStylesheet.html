@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 752)" />
+		<meta name="generator" content="appledoc 2.0.5 (build 775)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -26,6 +26,8 @@
 				<li id="jumpto_button" role="navigation">
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
 	
 	
 	
@@ -49,13 +51,13 @@
 	
 	<option value="//api/name/initWithStyleBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithStyleBlock:</option>
 	
-	<option value="//api/name/initWithStylesheet:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithStylesheet:</option>
-	
 	<option value="//api/name/mergeStylesheet:">&nbsp;&nbsp;&nbsp;&nbsp;- mergeStylesheet:</option>
 	
 	<option value="//api/name/mergedStyleDictionaryForElement:">&nbsp;&nbsp;&nbsp;&nbsp;- mergedStyleDictionaryForElement:</option>
 	
 	<option value="//api/name/parseStyleBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- parseStyleBlock:</option>
+	
+	<option value="//api/name/styles">&nbsp;&nbsp;&nbsp;&nbsp;- styles</option>
 	
 	
 	
@@ -66,10 +68,18 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating Stylesheets">Creating Stylesheets</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Working with CSS Style Blocks">Working with CSS Style Blocks</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Accessing Style Information">Accessing Style Information</a></span></li>
 	
 </ul></li>
 
@@ -91,13 +101,13 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithStyleBlock:">initWithStyleBlock:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithStylesheet:">initWithStylesheet:</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mergeStylesheet:">mergeStylesheet:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mergedStyleDictionaryForElement:">mergedStyleDictionaryForElement:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseStyleBlock:">parseStyleBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/styles">styles</a></span></li>
 	
 </ul></li>
 
@@ -133,6 +143,16 @@
 					
 					
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>This class represents a CSS style sheet used for specifying formatting for certain CSS selectors.</p>
+
+<p>It supports matching styles by class, by id or by tag name. Hierarchy matching is not supported yet.</p>
+					</div>
+					
+					
+					
 					
 					
 					<div class="section section-tasks">
@@ -140,49 +160,65 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						
-						
+						<a title="Creating Stylesheets" name="task_Creating Stylesheets"></a>
+						<h3 class="subsubtitle task-title">Creating Stylesheets</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/defaultStyleSheet">+&nbsp;defaultStyleSheet</a></code>
-		
+		<span class="tooltip"><p>Creates the default stylesheet.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initWithStyleBlock:">&ndash;&nbsp;initWithStyleBlock:</a></code>
-		
+		<span class="tooltip"><p>Creates a stylesheet with a given style block</p></span>
 	</span>
 	
 	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/initWithStylesheet:">&ndash;&nbsp;initWithStylesheet:</a></code>
-		
-	</span>
-	
-	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="Working with CSS Style Blocks" name="task_Working with CSS Style Blocks"></a>
+						<h3 class="subsubtitle task-title">Working with CSS Style Blocks</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/parseStyleBlock:">&ndash;&nbsp;parseStyleBlock:</a></code>
-		
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/mergedStyleDictionaryForElement:">&ndash;&nbsp;mergedStyleDictionaryForElement:</a></code>
-		
+		<span class="tooltip"><p>Parses a style block string and adds the found style rules to the receiver.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/mergeStylesheet:">&ndash;&nbsp;mergeStylesheet:</a></code>
-		
+		<span class="tooltip"><p>Merges styles from given stylesheet into the receiver</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Accessing Style Information" name="task_Accessing Style Information"></a>
+						<h3 class="subsubtitle task-title">Accessing Style Information</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mergedStyleDictionaryForElement:">&ndash;&nbsp;mergedStyleDictionaryForElement:</a></code>
+		<span class="tooltip"><p>Returns a dictionary that contains the merged style for a given element and the applicable style rules from the receiver.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/styles">&ndash;&nbsp;styles</a></code>
+		<span class="tooltip"><p>Returns a dictionary of the styles of the receiver</p></span>
 	</span>
 	
 	
@@ -206,6 +242,38 @@
 	<h3 class="subsubtitle method-title">defaultStyleSheet</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates the default stylesheet.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (DTCSSStylesheet *)defaultStyleSheet</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This stylesheet is based on the standard styles that Webkit provides for these tags. This stylesheet is loaded from an embedded copy of default.css.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCSSStylesheet.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 					</div>
@@ -221,11 +289,41 @@
 	<h3 class="subsubtitle method-title">initWithStyleBlock:</h3>
 	
 	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/initWithStylesheet:" title="initWithStylesheet:"></a>
-	<h3 class="subsubtitle method-title">initWithStylesheet:</h3>
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a stylesheet with a given style block</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithStyleBlock:(NSString *)<em>css</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>css</em></dt>
+			<dd><p>The CSS string for the style block</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCSSStylesheet.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -235,6 +333,43 @@
 	<h3 class="subsubtitle method-title">mergeStylesheet:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Merges styles from given stylesheet into the receiver</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)mergeStylesheet:(DTCSSStylesheet *)<em>stylesheet</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>stylesheet</em></dt>
+			<dd><p>the stylesheet to merge</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCSSStylesheet.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -242,11 +377,124 @@
 	<h3 class="subsubtitle method-title">mergedStyleDictionaryForElement:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a dictionary that contains the merged style for a given element and the applicable style rules from the receiver.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSDictionary *)mergedStyleDictionaryForElement:(DTHTMLElement *)<em>element</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>element</em></dt>
+			<dd><p>The HTML element.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The merged style dictionary containing only styles which selector matches the element</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCSSStylesheet.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/parseStyleBlock:" title="parseStyleBlock:"></a>
 	<h3 class="subsubtitle method-title">parseStyleBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Parses a style block string and adds the found style rules to the receiver.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)parseStyleBlock:(NSString *)<em>css</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>css</em></dt>
+			<dd><p>The CSS string for the style block</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCSSStylesheet.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/styles" title="styles"></a>
+	<h3 class="subsubtitle method-title">styles</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a dictionary of the styles of the receiver</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSDictionary *)styles</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCSSStylesheet.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -264,9 +512,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-02-23)</span><br />
+						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-03-03)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 752)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 775)</a>.</span></p>
 						
 					</div>
 				</div>

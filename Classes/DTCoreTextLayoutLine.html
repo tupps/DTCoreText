@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 752)" />
+		<meta name="generator" content="appledoc 2.0.5 (build 775)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -59,6 +59,8 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
+	<option value="//api/name/baselineOriginToPositionAfterLine:">&nbsp;&nbsp;&nbsp;&nbsp;- baselineOriginToPositionAfterLine:</option>
+	
 	<option value="//api/name/calculatedLeading">&nbsp;&nbsp;&nbsp;&nbsp;- calculatedLeading</option>
 	
 	<option value="//api/name/calculatedLineHeight">&nbsp;&nbsp;&nbsp;&nbsp;- calculatedLineHeight</option>
@@ -78,6 +80,8 @@
 	<option value="//api/name/imageBoundsInContext:">&nbsp;&nbsp;&nbsp;&nbsp;- imageBoundsInContext:</option>
 	
 	<option value="//api/name/initWithLine:layoutFrame:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithLine:layoutFrame:</option>
+	
+	<option value="//api/name/justifiedLineWithFactor:justificationWidth:">&nbsp;&nbsp;&nbsp;&nbsp;- justifiedLineWithFactor:justificationWidth:</option>
 	
 	<option value="//api/name/numberOfGlyphs">&nbsp;&nbsp;&nbsp;&nbsp;- numberOfGlyphs</option>
 	
@@ -106,6 +110,8 @@
 
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating Variants">Creating Variants</a></span></li>
 	
 </ul></li>
 
@@ -137,6 +143,8 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/baselineOriginToPositionAfterLine:">baselineOriginToPositionAfterLine:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/calculatedLeading">calculatedLeading</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/calculatedLineHeight">calculatedLineHeight</a></span></li>
@@ -156,6 +164,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/imageBoundsInContext:">imageBoundsInContext:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithLine:layoutFrame:">initWithLine:layoutFrame:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/justifiedLineWithFactor:justificationWidth:">justifiedLineWithFactor:justificationWidth:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/numberOfGlyphs">numberOfGlyphs</a></span></li>
 	
@@ -213,7 +223,7 @@
 						
 						
 						
-						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
 
 						<ul class="task-list">
 							<li>
@@ -300,6 +310,21 @@
 	</span>
 	
 	
+</li>
+						</ul>
+						
+						
+						<a title="Creating Variants" name="task_Creating Variants"></a>
+						<h3 class="subsubtitle task-title">Creating Variants</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/justifiedLineWithFactor:justificationWidth:">&ndash;&nbsp;justifiedLineWithFactor:justificationWidth:</a></code>
+		<span class="tooltip"><p>Creates a version of the receiver that is justified to the given width.</p></span>
+	</span>
+	
+	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/calculatedLineHeightMultiplier">&ndash;&nbsp;calculatedLineHeightMultiplier</a></code>
@@ -332,6 +357,13 @@
 	<span class="tooltip">
 		<code><a href="#//api/name/correctAttachmentHeights:">&ndash;&nbsp;correctAttachmentHeights:</a></code>
 		<span class="tooltip"><p>Adjust the baselines of all lines in this layout frame to fit the heights of text attachments.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/baselineOriginToPositionAfterLine:">&ndash;&nbsp;baselineOriginToPositionAfterLine:</a></code>
+		
 	</span>
 	
 	
@@ -455,6 +487,13 @@
 					<div class="section section-methods">
 						<a title="Instance Methods" name="instance_methods"></a>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/baselineOriginToPositionAfterLine:" title="baselineOriginToPositionAfterLine:"></a>
+	<h3 class="subsubtitle method-title">baselineOriginToPositionAfterLine:</h3>
+	
+	
+</div>
 						
 						<div class="section-method">
 	<a name="//api/name/calculatedLeading" title="calculatedLeading"></a>
@@ -628,6 +667,55 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/justifiedLineWithFactor:justificationWidth:" title="justifiedLineWithFactor:justificationWidth:"></a>
+	<h3 class="subsubtitle method-title">justifiedLineWithFactor:justificationWidth:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a version of the receiver that is justified to the given width.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (DTCoreTextLayoutLine *)justifiedLineWithFactor:(CGFloat)<em>justificationFactor</em> justificationWidth:(CGFloat)<em>justificationWidth</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>justificationFactor</em></dt>
+			<dd><p>Full or partial justification. When set to <code>1.0</code> or greater, full justification is performed. If this parameter is set to less than <code>1.0</code>, varying degrees of partial justification are performed. If it is set to <code>0</code> or less, no justification is performed.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>justificationWidth</em></dt>
+			<dd><p>The width to which the resultant line is justified. If justificationWidth is less than the actual width of the line, then negative justification is performed (that is, glyphs are squeezed together).</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextLayoutLine.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/numberOfGlyphs" title="numberOfGlyphs"></a>
 	<h3 class="subsubtitle method-title">numberOfGlyphs</h3>
 	
@@ -689,9 +777,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-02-23)</span><br />
+						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-03-03)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 752)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 775)</a>.</span></p>
 						
 					</div>
 				</div>
