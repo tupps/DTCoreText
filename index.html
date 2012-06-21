@@ -5,7 +5,7 @@
 		<title>DTCoreText Reference</title>
 		<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 775)" />
+		<meta name="generator" content="appledoc 2.0.5 (build 752)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -40,7 +40,9 @@
 
 <p>Please support us so that we can continue to make DTCoreText even more awesome!</p>
 
-<p><a href='http://www.pledgie.com/campaigns/16615'><img alt='Click here to lend your support to: Migrate DTCoreText to libxml2 and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/16615.png?skin_name=chrome' border='0' /></a></p>
+<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=M5DZ3PAN7NW8J">
+<img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+</a></p>
 
 <p>The project covers two broad areas:</p>
 
@@ -89,33 +91,48 @@
 
 <pre><code> #import "DTCoreText.h"
 </code></pre></li>
+<li><p>In your application target&rsquo;s Build Phases add the &ldquo;Static Library&rdquo; from the DTCoreText sub-project as a dependency.</p></li>
 <li><p>In your application target&rsquo;s Build Phases add all of the below to the Link Binary With Libraries phase (you can also do this from the Target&rsquo;s Summary view in the Linked Frameworks and Libraries):</p>
 
 <pre><code> The "Static Library" target from the DTCoreText sub-project
  ImageIO.framework
  QuartzCore.framework
  libxml2.dylib
+ CoreText.framework (DOH!)
 </code></pre></li>
 <li><p>Go to File: Project Settings… and change the derived data location to project-relative.</p></li>
 <li>Add the DerivedData folder to your git ignore.</li>
-<li>In your application&rsquo;s target Build Settings set the &ldquo;User Header Search Paths&rdquo; to the directory containing your project with recrusive set to YES. Set the Header Search Paths to <code>/usr/include/libxml2</code>. Set &ldquo;Always Search User Paths&rdquo; to YES.</li>
+<li>In your application&rsquo;s target Build Settings:
+
+<ul>
+<li>Set the &ldquo;User Header Search Paths&rdquo; to the directory containing your project with recrusive set to YES.</li>
+<li>Set the Header Search Paths to /usr/include/libxml2.</li>
+<li>Set &ldquo;Always Search User Paths&rdquo; to YES.</li>
+<li>Set the &ldquo;Other Linker Flags&rdquo; below</li>
+</ul>
+</li>
 </ol>
 
 
 <p>If you do not want to deal with Git submodules simply add DTCoreText to your project&rsquo;s git ignore file and pull updates to DTCoreText as its own independent Git repository. Otherwise you are free to add DTCoreText as a submodule.</p>
 
-<p><em>You also have these other installation options instead:</em></p>
+<p>LINKER SETTINGS:</p>
 
 <ul>
-<li>Copy all classes and headers from the Core/Source folder to your project.</li>
-<li>Link your project against the libDTCoreText static library. Note that the &ldquo;Static Library&rdquo; target does not produce a universal library. You will also need to add all header files contained in the Core/Source folder to your project.</li>
-<li>Link your project against the universal static library produced from the &ldquo;Static Framework&rdquo;.</li>
+<li> add the -ObjC to your app target&rsquo;s &ldquo;Other Linker Flags&rdquo;. This is needed whenever you link in any static library that contains Objective-C classes and categories.</li>
+<li> if you find that your app crashes with an unrecognized selector from one of this library&rsquo;s categories, you might also need the -all_load linker flag. Alternatively you can use -force-load with the full path to the static library. This causes the linker to load all categories from the static library.</li>
+<li> If your app does not use ARC yet (but DTCoreText does) then you also need the -fobjc-arc linker flag.</li>
 </ul>
 
 
-<p>When linking you need` to add the -ObjC and -all_load to your app target&rsquo;s &ldquo;Other Linker Flags&rdquo;. If your app does not use ARC yet (but DTCoreText does) then you also need the -fobjc-arc linker flag.</p>
+<p><em>Other Options (only mentioned for completeness)</em></p>
 
-<p>The project has been changed to use libxml2 for parsing HTML, so you need to link in the libxml2.dylib, and, if you&rsquo;re copying all files from Core/Source, you must add the path &ldquo;/usr/include/libxml2&rdquo; to your header search paths as well.</p>
+<ul>
+<li>Copy all classes and headers from the Core/Source folder to your project. Note for this you need to also generate and include the xxd'ed version of default.css.</li>
+<li>Link your project against the libDTCoreText static library that you previously compiled. Note that the &ldquo;Static Library&rdquo; target does not produce a universal library. You will also need to add all header files contained in the Core/Source folder to your project.</li>
+<li>Link your project against the universal static library produced from the &ldquo;Static Framework&rdquo;.</li>
+</ul>
+
 
 <h2>Known Issues</h2>
 
@@ -191,6 +208,8 @@
 							
 							<li><a href="Classes/DTTextAttachment.html">DTTextAttachment</a></li>
 							
+							<li><a href="Classes/DTTextBlock.html">DTTextBlock</a></li>
+							
 							<li><a href="Classes/DTWebVideoView.html">DTWebVideoView</a></li>
 							
 						</ul>
@@ -247,7 +266,7 @@
 							
 							<li><a href="Categories/UIColor+HTML.html">UIColor(HTML)</a></li>
 							
-							<li><a href="Categories/UIDevice+DTVersion.html">UIDevice(DTVersion)</a></li>
+							<li><a href="Categories/UIDevice+DTSimpleVersion.html">UIDevice(DTSimpleVersion)</a></li>
 							
 							<li><a href="Categories/UIImage+HTML.html">UIImage(HTML)</a></li>
 							
@@ -262,9 +281,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-03-03)</span><br />
+						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-06-21)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 775)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 752)</a>.</span></p>
 						
 	
 					</div>

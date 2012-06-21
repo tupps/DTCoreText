@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 775)" />
+		<meta name="generator" content="appledoc 2.0.5 (build 752)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -27,6 +27,8 @@
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 	
 	
 	
@@ -42,11 +44,11 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/initWithHTML:baseURL:documentAttributes:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithHTML:baseURL:documentAttributes:</option>
+	<option value="//api/name/initWithHTMLData:baseURL:documentAttributes:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithHTMLData:baseURL:documentAttributes:</option>
 	
-	<option value="//api/name/initWithHTML:documentAttributes:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithHTML:documentAttributes:</option>
+	<option value="//api/name/initWithHTMLData:documentAttributes:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithHTMLData:documentAttributes:</option>
 	
-	<option value="//api/name/initWithHTML:options:documentAttributes:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithHTML:options:documentAttributes:</option>
+	<option value="//api/name/initWithHTMLData:options:documentAttributes:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithHTMLData:options:documentAttributes:</option>
 	
 	
 	
@@ -57,10 +59,14 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating an NSAttributedString">Creating an NSAttributedString</a></span></li>
 	
 </ul></li>
 
@@ -74,11 +80,11 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithHTML:baseURL:documentAttributes:">initWithHTML:baseURL:documentAttributes:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithHTMLData:baseURL:documentAttributes:">initWithHTMLData:baseURL:documentAttributes:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithHTML:documentAttributes:">initWithHTML:documentAttributes:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithHTMLData:documentAttributes:">initWithHTMLData:documentAttributes:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithHTML:options:documentAttributes:">initWithHTML:options:documentAttributes:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithHTMLData:options:documentAttributes:">initWithHTMLData:options:documentAttributes:</a></span></li>
 	
 </ul></li>
 
@@ -111,6 +117,14 @@
 					
 					
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Methods for generating an <code>NSAttributedString</code> from HTML data. Those methods exist on Mac but have not been ported (publicly) to iOS. This project aims to remedy this.</p>
+					</div>
+					
+					
+					
 					
 					
 					<div class="section section-tasks">
@@ -118,28 +132,28 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
+						<a title="Creating an NSAttributedString" name="task_Creating an NSAttributedString"></a>
 						
-						
-
+<h3 class="subsubtitle task-title">Creating an NSAttributedString</h3>
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/initWithHTML:documentAttributes:">&ndash;&nbsp;initWithHTML:documentAttributes:</a></code>
-		
+		<code><a href="#//api/name/initWithHTMLData:documentAttributes:">&ndash;&nbsp;initWithHTMLData:documentAttributes:</a></code>
+		<span class="tooltip"><p>Initializes and returns a new <code>NSAttributedString</code> object from the HTML contained in the given object and base URL.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/initWithHTML:baseURL:documentAttributes:">&ndash;&nbsp;initWithHTML:baseURL:documentAttributes:</a></code>
-		
+		<code><a href="#//api/name/initWithHTMLData:baseURL:documentAttributes:">&ndash;&nbsp;initWithHTMLData:baseURL:documentAttributes:</a></code>
+		<span class="tooltip"><p>Initializes and returns a new <code>NSAttributedString</code> object from the HTML contained in the given object and base URL.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/initWithHTML:options:documentAttributes:">&ndash;&nbsp;initWithHTML:options:documentAttributes:</a></code>
-		
+		<code><a href="#//api/name/initWithHTMLData:options:documentAttributes:">&ndash;&nbsp;initWithHTMLData:options:documentAttributes:</a></code>
+		<span class="tooltip"><p>Initializes and returns a new <code>NSAttributedString</code> object from the HTML contained in the given object and base URL.</p></span>
 	</span>
 	
 	
@@ -161,22 +175,173 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/initWithHTML:baseURL:documentAttributes:" title="initWithHTML:baseURL:documentAttributes:"></a>
-	<h3 class="subsubtitle method-title">initWithHTML:baseURL:documentAttributes:</h3>
+	<a name="//api/name/initWithHTMLData:baseURL:documentAttributes:" title="initWithHTMLData:baseURL:documentAttributes:"></a>
+	<h3 class="subsubtitle method-title">initWithHTMLData:baseURL:documentAttributes:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes and returns a new <code>NSAttributedString</code> object from the HTML contained in the given object and base URL.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithHTMLData:(NSData *)<em>data</em> baseURL:(NSURL *)<em>baseURL</em> documentAttributes:(NSDictionary **)<em>docAttributes</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>data</em></dt>
+			<dd><p>The data in HTML format from which to create the attributed string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>baseURL</em></dt>
+			<dd><p>An <code>NSURL</code> that represents the base URL for all links within the HTML.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>docAttributes</em></dt>
+			<dd><p>Currently not in used.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns an initialized object, or nil if the data can’t be decoded.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSAttributedString+HTML.h</code><br />
+	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/initWithHTML:documentAttributes:" title="initWithHTML:documentAttributes:"></a>
-	<h3 class="subsubtitle method-title">initWithHTML:documentAttributes:</h3>
+	<a name="//api/name/initWithHTMLData:documentAttributes:" title="initWithHTMLData:documentAttributes:"></a>
+	<h3 class="subsubtitle method-title">initWithHTMLData:documentAttributes:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes and returns a new <code>NSAttributedString</code> object from the HTML contained in the given object and base URL.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithHTMLData:(NSData *)<em>data</em> documentAttributes:(NSDictionary **)<em>docAttributes</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>data</em></dt>
+			<dd><p>The data in HTML format from which to create the attributed string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>docAttributes</em></dt>
+			<dd><p>Currently not in used.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns an initialized object, or nil if the data can’t be decoded.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSAttributedString+HTML.h</code><br />
+	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/initWithHTML:options:documentAttributes:" title="initWithHTML:options:documentAttributes:"></a>
-	<h3 class="subsubtitle method-title">initWithHTML:options:documentAttributes:</h3>
+	<a name="//api/name/initWithHTMLData:options:documentAttributes:" title="initWithHTMLData:options:documentAttributes:"></a>
+	<h3 class="subsubtitle method-title">initWithHTMLData:options:documentAttributes:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes and returns a new <code>NSAttributedString</code> object from the HTML contained in the given object and base URL.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithHTMLData:(NSData *)<em>data</em> options:(NSDictionary *)<em>options</em> documentAttributes:(NSDictionary **)<em>docAttributes</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>data</em></dt>
+			<dd><p>The data in HTML format from which to create the attributed string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>docAttributes</em></dt>
+			<dd><p>Currently not in used.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>baseURL</em></dt>
+			<dd><p>An <code>NSURL</code> that represents the base URL for all links within the HTML.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns an initialized object, or nil if the data can’t be decoded.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSAttributedString+HTML.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -194,9 +359,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-03-03)</span><br />
+						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-06-21)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 775)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 752)</a>.</span></p>
 						
 					</div>
 				</div>

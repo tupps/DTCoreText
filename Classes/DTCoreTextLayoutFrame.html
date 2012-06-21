@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 775)" />
+		<meta name="generator" content="appledoc 2.0.5 (build 752)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -46,6 +46,8 @@
 	
 	<option value="//api/name/paragraphRanges">&nbsp;&nbsp;&nbsp;&nbsp;paragraphRanges</option>
 	
+	<option value="//api/name/textBlockHandler">&nbsp;&nbsp;&nbsp;&nbsp;textBlockHandler</option>
+	
 	
 	
 	
@@ -60,6 +62,8 @@
 	
 	<option value="//api/name/attributedStringFragment">&nbsp;&nbsp;&nbsp;&nbsp;- attributedStringFragment</option>
 	
+	<option value="//api/name/baselineOriginToPositionLine:afterLine:">&nbsp;&nbsp;&nbsp;&nbsp;- baselineOriginToPositionLine:afterLine:</option>
+	
 	<option value="//api/name/drawInContext:drawImages:">&nbsp;&nbsp;&nbsp;&nbsp;- drawInContext:drawImages:</option>
 	
 	<option value="//api/name/frameOfGlyphAtIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- frameOfGlyphAtIndex:</option>
@@ -67,6 +71,10 @@
 	<option value="//api/name/initWithFrame:layouter:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithFrame:layouter:</option>
 	
 	<option value="//api/name/initWithFrame:layouter:range:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithFrame:layouter:range:</option>
+	
+	<option value="//api/name/isLineFirstInParagraph:">&nbsp;&nbsp;&nbsp;&nbsp;- isLineFirstInParagraph:</option>
+	
+	<option value="//api/name/isLineLastInParagraph:">&nbsp;&nbsp;&nbsp;&nbsp;- isLineLastInParagraph:</option>
 	
 	<option value="//api/name/lineContainingIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- lineContainingIndex:</option>
 	
@@ -136,6 +144,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/paragraphRanges">paragraphRanges</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/textBlockHandler">textBlockHandler</a></span></li>
+	
 </ul></li>
 
 
@@ -152,6 +162,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/attributedStringFragment">attributedStringFragment</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/baselineOriginToPositionLine:afterLine:">baselineOriginToPositionLine:afterLine:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/drawInContext:drawImages:">drawInContext:drawImages:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/frameOfGlyphAtIndex:">frameOfGlyphAtIndex:</a></span></li>
@@ -159,6 +171,10 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithFrame:layouter:">initWithFrame:layouter:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithFrame:layouter:range:">initWithFrame:layouter:range:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isLineFirstInParagraph:">isLineFirstInParagraph:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isLineLastInParagraph:">isLineLastInParagraph:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lineContainingIndex:">lineContainingIndex:</a></span></li>
 	
@@ -304,6 +320,13 @@
 	</span>
 	
 	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/textBlockHandler">&nbsp;&nbsp;textBlockHandler</a></code>
+		<span class="tooltip"><p>Set a custom handler to be executed before text belonging to a text block is drawn.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
 </li>
 						</ul>
 						
@@ -359,6 +382,27 @@
 	<span class="tooltip">
 		<code><a href="#//api/name/lineContainingIndex:">&ndash;&nbsp;lineContainingIndex:</a></code>
 		<span class="tooltip"><p>The layout line that contains the given string index.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isLineFirstInParagraph:">&ndash;&nbsp;isLineFirstInParagraph:</a></code>
+		<span class="tooltip"><p>Determins if the given line is the first in a paragraph.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isLineLastInParagraph:">&ndash;&nbsp;isLineLastInParagraph:</a></code>
+		<span class="tooltip"><p>Determins if the given line is the last in a paragraph.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/baselineOriginToPositionLine:afterLine:">&ndash;&nbsp;baselineOriginToPositionLine:afterLine:</a></code>
+		<span class="tooltip"><p>Finds the appropriate baseline origin for a line to position it at the correct distance from a previous line.</p></span>
 	</span>
 	
 	
@@ -550,6 +594,50 @@
 	
 </div>
 						
+						<div class="section-method">
+	<a name="//api/name/textBlockHandler" title="textBlockHandler"></a>
+	<h3 class="subsubtitle method-title">textBlockHandler</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set a custom handler to be executed before text belonging to a text block is drawn.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) DTCoreTextLayoutFrameTextBlockHandler textBlockHandler</code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>handler</em></dt>
+			<dd><p>A DTCoreTextLayoutFrameTextBlockHandler block.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextLayoutFrame.h</code><br />
+	</div>				
+	
+	
+</div>
+						
 					</div>
 					
 					
@@ -625,6 +713,60 @@
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextLayoutFrame.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/baselineOriginToPositionLine:afterLine:" title="baselineOriginToPositionLine:afterLine:"></a>
+	<h3 class="subsubtitle method-title">baselineOriginToPositionLine:afterLine:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Finds the appropriate baseline origin for a line to position it at the correct distance from a previous line.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CGPoint)baselineOriginToPositionLine:(DTCoreTextLayoutLine *)<em>line</em> afterLine:(DTCoreTextLayoutLine *)<em>previousLine</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>line</em></dt>
+			<dd><p>The line</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>previousLine</em></dt>
+			<dd><p>The line after which to position the line.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The correct baseline origin for the line.</p>
+	</div>
 	
 	
 	
@@ -830,6 +972,114 @@
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextLayoutFrame.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isLineFirstInParagraph:" title="isLineFirstInParagraph:"></a>
+	<h3 class="subsubtitle method-title">isLineFirstInParagraph:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Determins if the given line is the first in a paragraph.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)isLineFirstInParagraph:(DTCoreTextLayoutLine *)<em>line</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>line</em></dt>
+			<dd><p>The Line</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><code>YES</code> if the given line is the first in a paragraph</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This is needed for example to determine whether paragraphSpaceBefore needs to be applied before it.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTCoreTextLayoutFrame.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isLineLastInParagraph:" title="isLineLastInParagraph:"></a>
+	<h3 class="subsubtitle method-title">isLineLastInParagraph:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Determins if the given line is the last in a paragraph.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)isLineLastInParagraph:(DTCoreTextLayoutLine *)<em>line</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>line</em></dt>
+			<dd><p>The Line</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><code>YES</code> if the given line is the last in a paragraph</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This is needed for example to determine whether paragraph spacing needs to be applied after it.</p>
+	</div>
 	
 	
 	
@@ -1357,9 +1607,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-03-03)</span><br />
+						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-06-21)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 775)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 752)</a>.</span></p>
 						
 					</div>
 				</div>

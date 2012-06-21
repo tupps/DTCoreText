@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 775)" />
+		<meta name="generator" content="appledoc 2.0.5 (build 752)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -40,6 +40,11 @@
 	
 	
 	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/prefixForListItemWithCounter:listStyle:listIndent:attributes:">&nbsp;&nbsp;&nbsp;&nbsp;+ prefixForListItemWithCounter:listStyle:listIndent:attributes:</option>
+	
+	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
@@ -49,6 +54,10 @@
 	<option value="//api/name/itemNumberInTextList:atIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- itemNumberInTextList:atIndex:</option>
 	
 	<option value="//api/name/plainTextString">&nbsp;&nbsp;&nbsp;&nbsp;- plainTextString</option>
+	
+	<option value="//api/name/rangeOfAnchorNamed:">&nbsp;&nbsp;&nbsp;&nbsp;- rangeOfAnchorNamed:</option>
+	
+	<option value="//api/name/rangeOfTextBlock:atIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- rangeOfTextBlock:atIndex:</option>
 	
 	<option value="//api/name/rangeOfTextList:atIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- rangeOfTextList:atIndex:</option>
 	
@@ -76,6 +85,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Converting to Other Representations">Converting to Other Representations</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating Special Attributed Strings">Creating Special Attributed Strings</a></span></li>
+	
 </ul></li>
 
 
@@ -83,6 +94,12 @@
 
 
 
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/prefixForListItemWithCounter:listStyle:listIndent:attributes:">prefixForListItemWithCounter:listStyle:listIndent:attributes:</a></span></li>
+	
+</ul></li>
 
 
 
@@ -93,6 +110,10 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/itemNumberInTextList:atIndex:">itemNumberInTextList:atIndex:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/plainTextString">plainTextString</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rangeOfAnchorNamed:">rangeOfAnchorNamed:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rangeOfTextBlock:atIndex:">rangeOfTextBlock:atIndex:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rangeOfTextList:atIndex:">rangeOfTextList:atIndex:</a></span></li>
 	
@@ -177,6 +198,20 @@
 	</span>
 	
 	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/rangeOfTextBlock:atIndex:">&ndash;&nbsp;rangeOfTextBlock:atIndex:</a></code>
+		<span class="tooltip"><p>Returns the range of the given text block that contains the given location.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/rangeOfAnchorNamed:">&ndash;&nbsp;rangeOfAnchorNamed:</a></code>
+		<span class="tooltip"><p>Returns the range of the given href anchor.</p></span>
+	</span>
+	
+	
 </li>
 						</ul>
 						
@@ -202,6 +237,21 @@
 </li>
 						</ul>
 						
+						
+						<a title="Creating Special Attributed Strings" name="task_Creating Special Attributed Strings"></a>
+						<h3 class="subsubtitle task-title">Creating Special Attributed Strings</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/prefixForListItemWithCounter:listStyle:listIndent:attributes:">+&nbsp;prefixForListItemWithCounter:listStyle:listIndent:attributes:</a></code>
+		<span class="tooltip"><p>Create a prefix for a paragraph in a list</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
 					</div>
 					
 					
@@ -209,6 +259,76 @@
 					
 					
 					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/prefixForListItemWithCounter:listStyle:listIndent:attributes:" title="prefixForListItemWithCounter:listStyle:listIndent:attributes:"></a>
+	<h3 class="subsubtitle method-title">prefixForListItemWithCounter:listStyle:listIndent:attributes:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Create a prefix for a paragraph in a list</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (NSAttributedString *)prefixForListItemWithCounter:(NSUInteger)<em>listCounter</em> listStyle:(DTCSSListStyle *)<em>listStyle</em> listIndent:(CGFloat)<em>listIndent</em> attributes:(NSDictionary *)<em>attributes</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>listCounter</em></dt>
+			<dd><p>The value for the list item.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>listStyle</em></dt>
+			<dd><p>The list style</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>listIndent</em></dt>
+			<dd><p>The amount in px to indent the list</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attributes</em></dt>
+			<dd><p>The attribute dictionary for the text to be prefixed</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An attributed string with the list prefix</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSAttributedString+DTCoreText.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
 					
 					
 					
@@ -312,6 +432,114 @@
 						<div class="section-method">
 	<a name="//api/name/plainTextString" title="plainTextString"></a>
 	<h3 class="subsubtitle method-title">plainTextString</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/rangeOfAnchorNamed:" title="rangeOfAnchorNamed:"></a>
+	<h3 class="subsubtitle method-title">rangeOfAnchorNamed:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the range of the given href anchor.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSRange)rangeOfAnchorNamed:(NSString *)<em>anchorName</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>list</em></dt>
+			<dd><p>The text block.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>anchorName</em></dt>
+			<dd><p>The name of the anchor.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The range of the given anchor.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSAttributedString+DTCoreText.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/rangeOfTextBlock:atIndex:" title="rangeOfTextBlock:atIndex:"></a>
+	<h3 class="subsubtitle method-title">rangeOfTextBlock:atIndex:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the range of the given text block that contains the given location.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSRange)rangeOfTextBlock:(DTTextBlock *)<em>textBlock</em> atIndex:(NSUInteger)<em>location</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>location</em></dt>
+			<dd><p>The location in the text.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>list</em></dt>
+			<dd><p>The text block.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The range of the given text block containing the location.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSAttributedString+DTCoreText.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -437,9 +665,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-03-03)</span><br />
+						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-06-21)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 775)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 752)</a>.</span></p>
 						
 					</div>
 				</div>

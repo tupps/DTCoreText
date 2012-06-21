@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 775)" />
+		<meta name="generator" content="appledoc 2.0.5 (build 752)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -45,6 +45,8 @@
 	<option value="instance_methods">Instance Methods</option>
 	
 	<option value="//api/name/attributedTextContentView:didDrawLayoutFrame:inContext:">&nbsp;&nbsp;&nbsp;&nbsp;- attributedTextContentView:didDrawLayoutFrame:inContext:</option>
+	
+	<option value="//api/name/attributedTextContentView:shouldDrawBackgroundForTextBlock:frame:context:forLayoutFrame:">&nbsp;&nbsp;&nbsp;&nbsp;- attributedTextContentView:shouldDrawBackgroundForTextBlock:frame:context:forLayoutFrame:</option>
 	
 	<option value="//api/name/attributedTextContentView:viewForAttachment:frame:">&nbsp;&nbsp;&nbsp;&nbsp;- attributedTextContentView:viewForAttachment:frame:</option>
 	
@@ -85,6 +87,8 @@
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/attributedTextContentView:didDrawLayoutFrame:inContext:">attributedTextContentView:didDrawLayoutFrame:inContext:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/attributedTextContentView:shouldDrawBackgroundForTextBlock:frame:context:forLayoutFrame:">attributedTextContentView:shouldDrawBackgroundForTextBlock:frame:context:forLayoutFrame:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/attributedTextContentView:viewForAttachment:frame:">attributedTextContentView:viewForAttachment:frame:</a></span></li>
 	
@@ -149,6 +153,13 @@
 	<span class="tooltip">
 		<code><a href="#//api/name/attributedTextContentView:didDrawLayoutFrame:inContext:">&ndash;&nbsp;attributedTextContentView:didDrawLayoutFrame:inContext:</a></code>
 		<span class="tooltip"><p>Called after a layout frame or a part of it is drawn.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/attributedTextContentView:shouldDrawBackgroundForTextBlock:frame:context:forLayoutFrame:">&ndash;&nbsp;attributedTextContentView:shouldDrawBackgroundForTextBlock:frame:context:forLayoutFrame:</a></code>
+		<span class="tooltip"><p>Called before the text belonging to a text block is drawn.</p></span>
 	</span>
 	
 	
@@ -237,6 +248,80 @@
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTAttributedTextContentView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/attributedTextContentView:shouldDrawBackgroundForTextBlock:frame:context:forLayoutFrame:" title="attributedTextContentView:shouldDrawBackgroundForTextBlock:frame:context:forLayoutFrame:"></a>
+	<h3 class="subsubtitle method-title">attributedTextContentView:shouldDrawBackgroundForTextBlock:frame:context:forLayoutFrame:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called before the text belonging to a text block is drawn.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)attributedTextContentView:(DTAttributedTextContentView *)<em>attributedTextContentView</em> shouldDrawBackgroundForTextBlock:(DTTextBlock *)<em>textBlock</em> frame:(CGRect)<em>frame</em> context:(CGContextRef)<em>context</em> forLayoutFrame:(DTCoreTextLayoutFrame *)<em>layoutFrame</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attributedTextContentView</em></dt>
+			<dd><p>The content view that drew a layout frame</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>textBlock</em></dt>
+			<dd><p>The text block</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>context</em></dt>
+			<dd><p>The graphics context that will be drawn into</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>layoutFrame</em></dt>
+			<dd><p>The layout frame that will be drawn for</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>returns</em></dt>
+			<dd><p><code>YES</code> is the standard fill of the text block should be drawn, <code>NO</code> if it should not</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>rect</em></dt>
+			<dd><p>The frame within the content view&rsquo;s coordinate system that will be drawn into</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This gives the developer an opportunity to draw a custom background below a text block.</p>
+	</div>
 	
 	
 	
@@ -461,9 +546,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-03-03)</span><br />
+						<p><span class="copyright">&copy; 2012 Cocoanetics. All rights reserved. (Last updated: 2012-06-21)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 775)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 752)</a>.</span></p>
 						
 					</div>
 				</div>
