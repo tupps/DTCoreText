@@ -27,6 +27,8 @@
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 	
 	
 	
@@ -47,8 +49,6 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/buildString">&nbsp;&nbsp;&nbsp;&nbsp;- buildString</option>
-	
 	<option value="//api/name/generatedAttributedString">&nbsp;&nbsp;&nbsp;&nbsp;- generatedAttributedString</option>
 	
 	<option value="//api/name/initWithHTML:options:documentAttributes:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithHTML:options:documentAttributes:</option>
@@ -62,10 +62,16 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating an Attributed String Builder">Creating an Attributed String Builder</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Generating Attributed Strings">Generating Attributed Strings</a></span></li>
 	
 </ul></li>
 
@@ -84,8 +90,6 @@
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/buildString">buildString</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/generatedAttributedString">generatedAttributedString</a></span></li>
 	
@@ -128,6 +132,14 @@
 					
 					
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Class for building an <code>NSAttributedString</code> from an HTML document.</p>
+					</div>
+					
+					
+					
 					
 					
 					<div class="section section-tasks">
@@ -135,35 +147,36 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						
-						
+						<a title="Creating an Attributed String Builder" name="task_Creating an Attributed String Builder"></a>
+						<h3 class="subsubtitle task-title">Creating an Attributed String Builder</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initWithHTML:options:documentAttributes:">&ndash;&nbsp;initWithHTML:options:documentAttributes:</a></code>
-		
+		<span class="tooltip"><p>Initializes and returns a new <code>NSAttributedString</code> object from the HTML contained in the given object and base URL.</p></span>
 	</span>
 	
 	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/buildString">&ndash;&nbsp;buildString</a></code>
-		
-	</span>
-	
-	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="Generating Attributed Strings" name="task_Generating Attributed Strings"></a>
+						<h3 class="subsubtitle task-title">Generating Attributed Strings</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/generatedAttributedString">&ndash;&nbsp;generatedAttributedString</a></code>
-		
+		<span class="tooltip"><p>  Creates the attributed string when called the first time.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/willFlushCallback">&nbsp;&nbsp;willFlushCallback</a></code>
-		
+		<span class="tooltip"><p>This block is called before the element is written to the output attributed string</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -185,6 +198,33 @@
 	<h3 class="subsubtitle method-title">willFlushCallback</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>This block is called before the element is written to the output attributed string</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) DTHTMLAttributedStringBuilderWillFlushCallback willFlushCallback</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTHTMLAttributedStringBuilder.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 					</div>
@@ -198,15 +238,40 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/buildString" title="buildString"></a>
-	<h3 class="subsubtitle method-title">buildString</h3>
-	
-	
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/generatedAttributedString" title="generatedAttributedString"></a>
 	<h3 class="subsubtitle method-title">generatedAttributedString</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>  Creates the attributed string when called the first time.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSAttributedString *)generatedAttributedString</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An <code>NSAttributedString</code> representing the HTML document passed in the initializer.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTHTMLAttributedStringBuilder.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -214,6 +279,58 @@
 						<div class="section-method">
 	<a name="//api/name/initWithHTML:options:documentAttributes:" title="initWithHTML:options:documentAttributes:"></a>
 	<h3 class="subsubtitle method-title">initWithHTML:options:documentAttributes:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes and returns a new <code>NSAttributedString</code> object from the HTML contained in the given object and base URL.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithHTML:(NSData *)<em>data</em> options:(NSDictionary *)<em>options</em> documentAttributes:(NSDictionary **)<em>docAttributes</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>data</em></dt>
+			<dd><p>The data in HTML format from which to create the attributed string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>Specifies how the document should be loaded. Contains values described in “Option keys for importing documents.”</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>docAttributes</em></dt>
+			<dd><p>Currently not in used.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns an initialized object, or <code>nil</code> if the data can’t be decoded.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTHTMLAttributedStringBuilder.h</code><br />
+	</div>				
 	
 	
 </div>

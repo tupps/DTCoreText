@@ -230,7 +230,7 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/plainTextString">&ndash;&nbsp;plainTextString</a></code>
-		
+		<span class="tooltip"><p>Converts the receiver into plain text.</p></span>
 	</span>
 	
 	
@@ -434,6 +434,43 @@
 	<h3 class="subsubtitle method-title">plainTextString</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Converts the receiver into plain text.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)plainTextString</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The receiver converted to plain text.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This is different from the <code>string</code> method of <code>NSAttributedString</code> by also erasing placeholders for text attachments.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSAttributedString+DTCoreText.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -452,11 +489,6 @@
 	
 	<div class="method-subsection arguments-section parameters">
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>list</em></dt>
-			<dd><p>The text block.</p></dd>
-		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>anchorName</em></dt>
@@ -508,13 +540,13 @@
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>location</em></dt>
-			<dd><p>The location in the text.</p></dd>
+			<dt><em>textBlock</em></dt>
+			<dd><p>The text block.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>list</em></dt>
-			<dd><p>The text block.</p></dd>
+			<dt><em>location</em></dt>
+			<dd><p>The location in the text.</p></dd>
 		</dl>
 		
 	</div>
